@@ -1,0 +1,29 @@
+/*Footer*/
+footer{
+    width: 100%;
+    height: 300px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--tertiary);
+}
+footer div, footer ul{
+    margin-top: 100px;
+}
+footer .footer-header{
+    width: 150px;
+    height: 50px;
+}
+footer ul{
+    list-style-type: none;
+}
+footer a{
+    text-decoration: none;
+    color: inherit;
+}
+.footer-icons{
+    display: flex;
+}
+.footer-icons img{
+    margin-left: 40px;
+}

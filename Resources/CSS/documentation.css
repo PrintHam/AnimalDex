@@ -1,0 +1,113 @@
+/*Header*/
+header{
+    background-color: var(--secondary);
+    width: 100%;
+    min-width: 900px;
+    height: 140px;
+}
+header .container{
+    width: 300px;
+    height: 120px;
+    margin: 0 auto;
+    animation: Bounce;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+header .container h1{
+    color: black;
+    text-align: center;
+}
+header .container p{
+    margin: 0 auto;
+    text-align: center;
+}
+/*API Documentation*/
+#api-documentation{
+    min-height: 1200px;
+    min-width: 900px;
+    background-color: var(--primary);
+    color: white;
+}
+#api-documentation .container{
+    max-width: 800px;
+    display: flex;
+    gap: 120px;
+    margin: 0 auto;
+}
+#api-documentation .documentation-nav, .api-info{
+    margin-top: 20%;
+}
+#api-documentation .api-info .header{
+    color: greenyellow;
+    text-align: center;
+}
+#api-documentation .documentation-nav{
+    background-color: var(--secondary);
+    border-radius: 10px;
+    padding: 30px;
+    max-height: 400px;
+}
+#api-documentation .documentation-nav h1{
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 28px;
+    color: lightgreen;
+    border-bottom: 2px lightgreen solid;
+}
+#api-documentation .documentation-nav {
+    text-align: center;
+}
+#api-documentation .documentation-nav div:nth-child(2){
+    margin-top: 40px;
+}
+#api-documentation .documentation-nav ul{
+    list-style-type: none;
+}
+#api-documentation .documentation-nav a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+}
+#api-documentation .api-info{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--tertiary);
+}
+#api-documentation .api-info .info{
+    padding: 20px;
+    border-bottom: 2px white solid;
+}
+#api-documentation .api-info .info p{
+    margin-top: 30px;
+}
+#api-documentation .api-info .info a{
+    color: mediumaquamarine;
+}
+/*Animations*/
+@keyframes Bounce{
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
+/*For Phones*/
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3) {
+    #api-documentation{
+        height: 2100px;
+    }
+    #api-documentation .container{
+        flex-direction: column;
+        gap: 25px;
+    }
+    #api-documentation .documentation-nav, .api-info{
+        width: 50%;
+        margin: 10% auto;
+    }
+    #api-documentation p{
+        font-size: 25px;
+    }
+}

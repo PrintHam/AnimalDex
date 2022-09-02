@@ -1,0 +1,230 @@
+:root{
+    --primary: #131313;
+    --secondary: #1441;
+    --tertiary: #1a1a1a;
+}
+/*Header*/
+header{
+    background-color: var(--secondary);
+    width: 100%;
+    min-width: 900px;
+    height: 140px;
+}
+header .container{
+    width: 300px;
+    height: 120px;
+    margin: 0 auto;
+    animation: Bounce;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+header .container h1{
+    color: black;
+}
+/*Company Features*/
+#company-features{
+    width: 100%;
+    min-width: 900px;
+    height: 1200px;
+    color: white;
+    background-color: var(--primary);
+}
+#company-features .container{
+    width: 100%;
+    height: 1200px;
+}
+#company-features .flex{
+    display: flex;
+    flex-direction: column;
+}
+#company-features .header h1{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 33px;
+    text-align: center;
+}
+#company-features .features{
+    display: flex;
+    justify-content: space-evenly;
+}
+#company-features .features h1{
+    margin-bottom: 20px;
+}
+#company-features .features img{
+    margin-bottom: 10px;
+}
+#company-features .features p{
+    width: 300px;
+    margin-bottom: 30px;
+}
+#company-features .features button{
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 19px;
+    background-color: mediumaquamarine;
+}
+/*Selectors*/
+#company-features .features div p:hover{
+    animation: FontShift;
+    animation-duration: 2s;
+}
+#company-features .features div button:hover{
+    background-color: transparent;
+    border: none;
+    color: white;
+    border-radius: 0;
+    border-top: 2px mediumaquamarine solid;
+    border-bottom: 2px mediumaquamarine solid;
+}
+#company-features .features div button:after{
+    background-color: transparent;
+    border: none;
+    color: white;
+    border-radius: 0;
+    border-top: 2px mediumaquamarine solid;
+    border-bottom: 2px mediumaquamarine solid;
+}
+/*Color Split*/
+/*#color-split{*/
+/*    height: 75px;*/
+/*    min-width: 900px;*/
+/*    background-color: rgba(102, 205, 170, 0.6);*/
+/*}*/
+/*API Features*/
+#company-api{
+    height: 600px;
+    min-width: 900px;
+    color: white;
+    background-color: var(--tertiary);
+}
+#company-api .container{
+    height: 600px;
+}
+#company-api .flex{
+    display: flex;
+    flex-direction: column;
+}
+#company-api .header h1{
+    margin-top: 3%;
+    font-size: 50px;
+    text-align: center;
+}
+#company-api .usage-images{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+#company-api .usage-images div:nth-child(1) img{
+    margin-bottom: 20px;
+}
+#company-api .usage-images div{
+    margin-top: 3%;
+}
+/*Company Promise*/
+#company-promise{
+    color: white;
+    height: 500px;
+    min-width: 900px;
+    background-color: var(--primary);
+}
+#company-promise .container{
+    height: 500px;
+}
+#company-promise .flex{
+    display: flex;
+    flex-direction: column;
+}
+#company-promise .header{
+    text-align: center;
+}
+#company-promise .header h1{
+    margin-top: 5%;
+    font-size: 40px;
+}
+#company-promise .text{
+    font-size: 20px;
+    width: 700px;
+    text-align: center;
+    margin: 30px auto;
+}
+/*Animations*/
+@keyframes Bounce{
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
+@keyframes FontShift {
+    from{
+        color: white;
+    }
+    to{
+        font-size: 18px;
+    }
+}
+/*For Phones*/
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3) {
+    #company-features{
+        height: 1800px;
+    }
+    #company-features .container{
+        height: 1800px;
+    }
+    #company-features .header h1{
+        margin-top: 20%;
+        font-size: 40px;
+    }
+    #company-features .features{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    #company-features .features div{
+        margin-bottom: 40px;
+    }
+    #company-features .features h1{
+        font-size: 33px;
+    }
+    #company-features .features p{
+        font-size: 25px;
+        width: 400px;
+        animation: none;
+    }
+}
+/*For Tablets*/
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    #company-features .header h1{
+        margin-top: 30%;
+    }
+    #company-features .features p{
+        font-size: 18px;
+        animation: none;
+    }
+}
+/*Smaller Desktop Screens*/
+@media only screen and (max-width: 900px){
+    #company-features{
+        height: 1800px;
+    }
+    #company-features .container{
+        height: 1800px;
+    }
+    #company-features .header h1{
+        margin-top: 20%;
+        font-size: 40px;
+    }
+    #company-features .features div{
+        margin-bottom: 40px;
+    }
+    #company-features .features{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+}
